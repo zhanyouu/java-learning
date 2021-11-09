@@ -1,13 +1,13 @@
 package com.proxy.cglibDynamicProxy;
 
-import net.sf.cglib.proxy.Enhancer;
+//import net.sf.cglib.proxy.Enhancer;
 
 
 public class MainTest {
     public static void main(String[] args) {
-        SmsInterceptorHandler smsInterceptorHandler = new SmsInterceptorHandler(new SmsService2());
-        SmsService2 service = (SmsService2) Enhancer.create(SmsService2.class,smsInterceptorHandler);
-        service.send("java");
+//        SmsInterceptorHandler smsInterceptorHandler = new SmsInterceptorHandler(new SmsService2());
+//        SmsService2 service = (SmsService2) Enhancer.create(SmsService2.class,smsInterceptorHandler);
+//        service.send("java");
     }
     /**
      * cglib和jdk动态代理的区别
