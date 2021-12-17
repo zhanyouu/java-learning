@@ -54,4 +54,25 @@ public class ThreadPoolTest {
  *      task.run();
  *  }
  *  当前线程执行任务是一个while循环，如果当前线程执行结束，发现工作队列还有任务，会从工作队列获取任务继续执行。直到工作队列无线程可执行
+ *
+ *  线程池ThreadPoolExecutor中通常有以下四种策略：
+ *
+ * 1-AbortPolicy:
+ *
+ * 丢弃任务并抛出RejectedExecutionException异常。
+ *
+ *
+ * 2-DiscardPolicy：
+ *
+ * 丢弃任务，但是不抛出异常。
+ *
+ *
+ * 3-DiscardOldestPolicy：
+ *
+ * 丢弃队列最前面的未执行的任务，然后重新提交被拒绝的任务
+ *
+ *
+ * 4-CallerRunsPolicy：
+ *
+ * 由调用线程（提交任务的线程）处理该任务
  */
