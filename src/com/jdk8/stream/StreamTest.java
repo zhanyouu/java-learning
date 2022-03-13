@@ -8,6 +8,7 @@ public class StreamTest {
     public static void main(String[] args) {
         List<String> strings = Arrays.asList("abc", "", "bc", "efg", "abcd","", "jkl");
         List<String> filtered = strings.stream().filter(string -> !string.isEmpty()).collect(Collectors.toList());
+        strings.stream().forEach((a)-> System.out.println(a+"!"));
         System.out.println(filtered);
     }
 }
