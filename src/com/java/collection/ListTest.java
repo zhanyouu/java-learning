@@ -15,6 +15,7 @@ public class ListTest {
             System.out.println(iterator.next());
             list.add("3");
         }
+        System.out.println(list.size());
     }
 }
 /**
