@@ -5,6 +5,14 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class HashMapTest {
     public static void main(String[] args) {
+        Map<String,String> map = new HashMap<>();
+        map.put("1","1");
+        map.put("2","2");
+        Iterator iterator2 = map.entrySet().iterator();
+        while (iterator2.hasNext()){
+            System.out.println(iterator2.next());
+            map.put("3","3");//Exception in thread "main" java.util.ConcurrentModificationException
+        }
         ConcurrentHashMap concurrentHashMap = new ConcurrentHashMap();
         concurrentHashMap.put("1", "1");
         concurrentHashMap.put("2", "2");
@@ -13,6 +21,7 @@ public class HashMapTest {
             System.out.println(iterator.next());
             concurrentHashMap.put("下次循环正常执行","3");
         }
+        System.out.println(concurrentHashMap.size());
     }
 }
 /**
@@ -25,8 +34,8 @@ public class HashMapTest {
  *
  *  安全失败（fail-safe）
  *
- * 采用安全失败机制的集合容器，在遍历时不是直接在集合内容上访问的，而是先复制原有集合内容，在拷贝的集合上进行遍历。（错误）
- * 由于迭代时是对原集合的拷贝进行遍历，所以在遍历过程中对原集合所作的修改并不能被迭代器检测到，故不会抛 ConcurrentModificationException 异常（错误）
+ * 采用安全失败机制的集合容器，在遍历时不是直接在集合内容上访问的，而是先复制原有集合内容，在拷贝的集合上进行遍历。
+ * 由于迭代时是对原集合的拷贝进行遍历，所以在遍历过程中对原集合所作的修改并不能被迭代器检测到，故不会抛 ConcurrentModificationException 异常
  * 注意：ConcurrentHashMap里面迭代器使用的对象是当前对象（同一个对象），concurrentHashMap.put（）方法修改操作能被迭代器检测到。
  * 但是不一定能迭代出来（和插入的位置相关，有可能插入的位置已经迭代过了，有可能接下来才迭代），即针对上述方法concurrentHashMap.put("下次循环正常执行","3");
  * 不同的值，运行结果可能会有差异。
