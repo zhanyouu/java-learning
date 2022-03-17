@@ -3,6 +3,9 @@ package com.regExp;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * 占友的程序化
+ */
 public class regExpTest {
     public static void main(String[] args) {
         String content = "abc ab";
