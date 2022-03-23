@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 
 public class regExpTest {
     public static void main(String[] args) {
-        String content = "abc ab";
+        String content = "abc ab a";
         String regExp = "ab\\b";
         Pattern pattern = Pattern.compile(regExp);
         Matcher matcher = pattern.matcher(content);
