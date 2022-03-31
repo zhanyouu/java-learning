@@ -1,4 +1,4 @@
-package com.jZOffer;
+package com.jzoffer;
 
 public class Solution2 {
     public int getNo(){

@@ -1,4 +1,4 @@
-package com.jZOffer;
+package com.jzoffer;
 
 public class GetNo {
     private static int sno = 0;

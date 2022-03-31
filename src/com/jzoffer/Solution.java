@@ -1,4 +1,4 @@
-package com.jZOffer;
+package com.jzoffer;
 
 public class Solution {
     public static void main(String[] args) {
