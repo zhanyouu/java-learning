@@ -3,7 +3,7 @@ package com.lock;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class test {
+public class Test {
 
     private Lock lock = new ReentrantLock();
 
