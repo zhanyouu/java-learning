@@ -1,4 +1,4 @@
-package com.jdk8.Lambda;
+package com.jdk8.lambda;
 
 public class Java8Tester {
     public static void main(String args[]){

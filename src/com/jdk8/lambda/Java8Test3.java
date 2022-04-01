@@ -1,4 +1,4 @@
-package com.jdk8.Lambda;
+package com.jdk8.lambda;
 
 import java.util.function.BiPredicate;
 import java.util.function.Consumer;
