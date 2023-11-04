@@ -32,7 +32,7 @@
 好，差不多就说到这了，继续看不到终点的茫茫学习路....
 
 # 目录
-## 设计模式概述、UML
+##   设计模式概述、UML
 博客地址：[设计模式概述、UML](https://luzhenyu.blog.csdn.net/article/details/122292204)
 * 设计模式概述
 * UML，类与类之间关系
@@ -43,7 +43,7 @@
 继承关系
 实现关系
 
-## 软件设计原则
+##   软件设计原则
 博客地址：[软件设计原则](https://luzhenyu.blog.csdn.net/article/details/122303847)
 * **开闭原则**：对拓展开放，对修改封闭。
 * **里式代换原则**：任何基类可以出现的地方，子类一定可以出现，反之不一定。
@@ -53,8 +53,8 @@
 Talk only to your immediate friends and not to strangers
 * **合成复用原则**：尽量先使用组合或者聚合等关联关系来实现，其次才考虑使用继承关系来实现。
 
-## 创建型模式
-### 单例模式
+##   创建型模式
+###  单例模式
 博客地址：[创建型模式 - 单例模式](https://luzhenyu.blog.csdn.net/article/details/122308030)
 * 单例模式的实现：
 饿汉式 1：静态变量
@@ -69,7 +69,7 @@ Talk only to your immediate friends and not to strangers
 反射破坏单例
 * JDK 源码 - Runtime 类
 
-###  工厂模式
+###   工厂模式
 博客地址：[创建型模式 - 工厂模式](https://luzhenyu.blog.csdn.net/article/details/122318746)
 * **简单工厂模式**
   扩展 - 静态工厂
@@ -78,83 +78,83 @@ Talk only to your immediate friends and not to strangers
 * 扩展：简单工厂 + 配置文件
 * JDK 源码 - Collection.iterator
 
-### 原型模式
+###  原型模式
 博客地址：[创建者模式 - 原型模式](https://luzhenyu.blog.csdn.net/article/details/122339858)
 * 浅克隆
 * 深克隆
 实现 1：文件流 + 对象流
 实现 2：字节数组流 + 对象流
 
-### 建造者模式
+###  建造者模式
 博客地址：[创建者模式 - 建造者模式](https://luzhenyu.blog.csdn.net/article/details/122341864)
 * 建造者模式的实现
 * 拓展 - 使用建造者模式创建对象
 
-## 结构型模式
-### 代理模式
+##   结构型模式
+###  代理模式
 博客地址：[结构型模式 - 代理模式](https://luzhenyu.blog.csdn.net/article/details/122362769#518__404)
 * 静态代理
 * 动态代理
 JDK 动态代理
 CGLib 动态代理
 
-### 适配器模式
+###  适配器模式
 博客地址：[结构型模式 - 适配器模式](https://luzhenyu.blog.csdn.net/article/details/122392881)
 * 类适配器模式
 * 对象适配器模式
 * 接口适配器模式
 * JDK 源码：Reader 与 InputStream
 
-### 装饰者模式
+###  装饰者模式
 博客地址：[结构型模式 - 装饰者模式](https://luzhenyu.blog.csdn.net/article/details/122579712)
 * JDK 源码：IO 流的包装类
 * 代理和装饰者的区别
 
-### 桥接模式
+###  桥接模式
 博客地址：[结构型模式 - 桥接模式](https://luzhenyu.blog.csdn.net/article/details/122582393)
 
-### 外观模式
+###  外观模式
 博客地址：[结构型模式 - 外观模式](https://luzhenyu.blog.csdn.net/article/details/122583731)
 * Tomcat 源码
 
-### 组合模式
+###  组合模式
 博客地址：[结构型模式 - 组合模式](https://luzhenyu.blog.csdn.net/article/details/122603130)
 
-### 享元模式
+###  享元模式
 博客地址：[结构型模式 - 享元模式](https://luzhenyu.blog.csdn.net/article/details/122605478)
 * JDK 源码 - Integer
-## 行为型模式
-### 模板方法模式
+##   行为型模式
+###  模板方法模式
 博客地址：[行为型模式 - 模板方法模式](https://luzhenyu.blog.csdn.net/article/details/122621356)
 * JDK 源码 - InputStream
 
-### 策略模式
+###  策略模式
 博客地址：[行为型模式 - 策略模式](https://luzhenyu.blog.csdn.net/article/details/122623421)
 * JDK 源码 - Comparator
 
-### 命令模式
+###  命令模式
 博客地址：[行为型模式 - 命令模式](https://luzhenyu.blog.csdn.net/article/details/122632508)
 * JDK 源码 - Runnable
 
-### 职责链模式
+###  职责链模式
 博客地址：[行为型模式 - 职责链模式](https://luzhenyu.blog.csdn.net/article/details/122636960)
 * JavaWeb 源码 - FilterChain
 
-### 	状态模式
+###  	状态模式
 博客地址：[行为型模式 - 状态模式](https://luzhenyu.blog.csdn.net/article/details/122651139)
 
-### 观察者模式
+###  观察者模式
 博客地址：[行为型模式 - 观察者模式](https://luzhenyu.blog.csdn.net/article/details/122659050)
 * JDK 提供的实现 - Observable、Observer
 
-### 中介者模式
+###  中介者模式
 博客地址：[行为型模式 - 中介者模式](https://luzhenyu.blog.csdn.net/article/details/122668902)
 
-### 迭代器模式
+###  迭代器模式
 博客地址：[《设计模式详解》行为型模式 - 迭代器模式](https://luzhenyu.blog.csdn.net/article/details/122672907)
 * JDK 源码 - Iteraotr
 
-### 访问者模式
+###  访问者模式
 博客地址：[《设计模式详解》行为型 - 访问者模式](https://luzhenyu.blog.csdn.net/article/details/122674414)
 >变量被声明时的类型叫做变量的**静态类型**（也被叫做明显类型）；
 >而变量所引用的对象的真实类型又叫做变量的**实际类型**。
@@ -165,15 +165,15 @@ CGLib 动态代理
 * **静态分派**：通过方法重载，编译时实现
 * **双分派**：结合以上两种方式
 
-### 备忘录模式
+###  备忘录模式
 博客地址：[行为型模式 - 备忘录模式](https://luzhenyu.blog.csdn.net/article/details/122685434)
 * 黑箱备忘录模式
 * 白箱备忘录模式
 
-### 解释器模式
+###  解释器模式
 博客地址：[行为型模式 - 解释器模式](https://luzhenyu.blog.csdn.net/article/details/122686960)
 
-## 自定义 Spring 框架
+##   自定义 Spring 框架
 博客地址：[手写简单的 Spring 框架](https://luzhenyu.blog.csdn.net/article/details/122724689)
 Spring IOC 相关接口：
 * BeanFactory：定义了 IoC 容器的基本功能规范。

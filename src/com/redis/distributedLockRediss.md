@@ -1,4 +1,4 @@
-##分布式锁（Redisson）-从零开始，深入理解与不断优化
+##  分布式锁（Redisson）-从零开始，深入理解与不断优化
 
 分布式锁的使用场景：
 
@@ -44,7 +44,7 @@ public class IndexController {
 ```java
 int stock = Integer.parseInt(stringRedisTemplate.opsForValue().get("stock"));
 ```
-###案例2-使用synchronized 实现单机锁
+### 案例2-使用synchronized 实现单机锁
 
 在遇到案例1的问题后，大部分人的第一反应都会想到加锁来控制事务的原子性，如下代码所示：
 ```java
@@ -72,7 +72,7 @@ public String deductStock(){
 
 答案是不能，如上图所示，请求经Nginx分发后，可能存在多个服务同时从Redis中获取库存数据，此时只加synchronized （单机锁）是无效的，并发越高，出现问题的几率就越大。
 
-###案例3-使用SETNX实现分布式锁
+### 案例3-使用SETNX实现分布式锁
 
 setnx：将 key 的值设为 value，当且仅当 key 不存在。 若给定 key 已经存在，则 setnx 不做任何动作。
 
@@ -154,7 +154,7 @@ public String deductStock(){
 }
 ```
 经过改进后的代码是否还存在问题呢？我们思考正常执行的情况下应该是没有问题，但我们假设请求在执行到业务代码时服务突然宕机了，或者正巧你的运维同事重新发版，粗暴的 kill -9 掉了呢，那代码还能执行 finally 吗？
-###案例4-加入过期时间
+### 案例4-加入过期时间
 针对想到的问题，对代码再次进行优化，加入过期时间，这样即便出现了上述的问题，在时间到期后锁也会自动释放掉，不会出现“死锁”的情况。
 ```java
 @RequestMapping(value = "/duduct_stock")
@@ -212,7 +212,7 @@ public String deductStock(){
 
 针对问题2，我们思考不断的延长过期时间真的合适吗？设置短了存在超时自动释放的问题，设置长了又会出现宕机后一段时间锁无法释放的问题，虽然不会再出现“死锁”。针对这个问题，如何解决呢？
 
-###案例5-Redisson分布式锁
+### 案例5-Redisson分布式锁
 SpringBoot集成Redisson步骤
 
 引入依赖

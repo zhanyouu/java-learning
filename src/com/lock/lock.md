@@ -1,4 +1,4 @@
-##可重入锁
+##  可重入锁
 ReentrantLock主要利用CAS+AQS队列来实现。它支持公平锁和非公平锁，两者的实现类似 
 
 【ReentrantLock使用示例】
@@ -29,7 +29,7 @@ ReentrantLock的基本实现可以概括为：先通过CAS尝试获取锁。如�
 
 公平锁：如果同时还有另一个线程进来尝试获取，当它发现自己不是在队首的话，就会排到队尾，由队首的线程获取到锁。
 
-###lock()与unlock()实现原理
+### lock()与unlock()实现原理
 
 可重入锁。可重入锁是指同一个线程可以多次获取同一把锁。ReentrantLock和synchronized都是可重入锁。
 
