@@ -21,9 +21,8 @@ public class Main {
         ChannelFuture serverChannelFuture = ZhangServer.bind(serverBootstrap, PORT);
         Bootstrap clientBootstrap = LiClient.bootstrap();
         ChannelFuture clientChannelFuture = LiClient.connect(clientBootstrap, HOST, PORT, MAX_RETRY);
-        serverChannelFuture.await();
-        clientChannelFuture.await();
-        for (int i = 0; i < COUNT_LEVEL_3; i++) {
+        Thread.sleep(1000);
+        for (int i = 0; i < 1; i++) {
             MsgPacket one = MsgRepository.getInstance().getZhangMsgPacket(MSG_SESSION_ONE);
             MsgPacket two = MsgRepository.getInstance().getLiMsgPacket(MSG_SESSION_TWO);
             MsgPacket three = MsgRepository.getInstance().getLiMsgPacket(MSG_SESSION_THREE);
