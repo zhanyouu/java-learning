@@ -50,10 +50,11 @@
             <artifactId>kryo</artifactId>
             <version>5.0.0-RC4</version>
         </dependency>
+        <!--netty-->
         <dependency>
-            <groupId>org.apache.rocketmq</groupId>
-            <artifactId>rocketmq-client</artifactId>
-            <version>4.5.2</version>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>4.1.33.Final</version>
         </dependency>
     </dependencies>
 
